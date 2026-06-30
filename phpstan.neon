@@ -1,0 +1,14 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 5
+    paths:
+        - src
+    ignoreErrors:
+        # The widget view lives under a namespace registered at runtime by the
+        # service provider (filament-backup-monitor::), which PHPStan cannot see,
+        # so it reads the literal as a non-view-string.
+        -
+            path: src/Widgets/LatestBackupsWidget.php
+            identifier: argument.type
