@@ -5,10 +5,8 @@ parameters:
     level: 5
     paths:
         - src
-    ignoreErrors:
-        # The widget view lives under a namespace registered at runtime by the
-        # service provider (filament-backup-monitor::), which PHPStan cannot see,
-        # so it reads the literal as a non-view-string.
-        -
-            path: src/Widgets/LatestBackupsWidget.php
-            identifier: argument.type
+    # The BackupRun model lives in the core package; point Larastan at its
+    # vendored migration so backup_runs attributes (size_in_bytes, message,
+    # created_at, …) resolve from the schema without @property docblocks.
+    databaseMigrationsPath:
+        - vendor/brimham/backup-monitor/database/migrations
