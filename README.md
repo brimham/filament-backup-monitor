@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="art/thumbnail.png" alt="Filament Backup Monitor — backup run history and health, right in your Filament panel" width="840">
+</p>
+
 # Filament Backup Monitor
 
 A [Filament](https://filamentphp.com) panel for [brimham/backup-monitor](https://github.com/brimham/backup-monitor) — see the history of every [spatie/laravel-backup](https://github.com/spatie/laravel-backup) run and the last backup per destination at a glance.
