@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="art/thumbnail.png" alt="Filament Backup Monitor — backup run history and health, right in your Filament panel" width="840">
+  <img src="https://raw.githubusercontent.com/brimham/filament-backup-monitor/main/art/thumbnail.png" alt="Filament Backup Monitor — backup run history and health, right in your Filament panel" width="840">
 </p>
 
 # Filament Backup Monitor
@@ -16,7 +16,7 @@ This is the free core. Alerting on missed/silent failures, multi-channel notific
 ## Screenshot
 
 <p align="center">
-  <img src="art/backup-monitor.png" alt="The Backups page: the last-backup-per-destination health panel above the run-history table" width="700">
+  <img src="https://raw.githubusercontent.com/brimham/filament-backup-monitor/main/art/backup-monitor.png" alt="The Backups page: the last-backup-per-destination health panel above the run-history table" width="700">
 </p>
 
 ## Requirements
@@ -58,4 +58,4 @@ A **Backups** item appears in the panel navigation, linking to the run-history p
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](https://github.com/brimham/filament-backup-monitor/blob/main/LICENSE).
