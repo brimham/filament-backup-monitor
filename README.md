@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/brimham/filament-backup-monitor/main/art/thumbnail.png" alt="Filament Backup Monitor — backup run history and health, right in your Filament panel" width="840">
+  <img class="filament-hidden" src="https://raw.githubusercontent.com/brimham/filament-backup-monitor/main/art/thumbnail.png" alt="Filament Backup Monitor — backup run history and health, right in your Filament panel" width="840">
 </p>
 
 # Filament Backup Monitor
