@@ -9,6 +9,12 @@ The core `brimham/backup-monitor` package records each backup run to a `backup_r
 
 This is the free core. Alerting on missed/silent failures, multi-channel notifications, and a multi-site dashboard are part of the separate Pro package.
 
+## Screenshot
+
+<p align="center">
+  <img src="art/backup-monitor.png" alt="The Backups page: the last-backup-per-destination health panel above the run-history table" width="700">
+</p>
+
 ## Requirements
 
 - PHP 8.3+
