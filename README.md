@@ -11,7 +11,7 @@ The core `brimham/backup-monitor` package records each backup run to a `backup_r
 - a **run-history table** — every backup, health-check and cleanup with its status, destination, size and timestamp
 - a **"last backup per destination" health panel** — the most recent run for each disk, so a silently failing destination is obvious
 
-This is the free core. Alerting on missed/silent failures, multi-channel notifications, and a multi-site dashboard are part of the separate Pro package.
+This is the free core. Proactive alerting on missed/silent failures and a multi-site dashboard live in Pro — see [Upgrade to Pro](#upgrade-to-pro).
 
 ## Screenshot
 
@@ -55,6 +55,28 @@ public function panel(Panel $panel): Panel
 ```
 
 A **Backups** item appears in the panel navigation, linking to the run-history page with the health panel at the top.
+
+## Upgrade to Pro
+
+This panel shows you the history of backups that *ran*. It can't show you the backup that
+**silently stopped running** — there's no event to record, so a destination that quietly dies just
+stops updating while everything still looks fine. That's the failure that actually loses data.
+[**Brimham Backup Monitor Pro**](https://brimham.app) closes that gap:
+
+- **Missed / overdue detection** — a dead-man's-switch that flags any destination whose last
+  successful backup is older than its expected cadence (or has never run).
+- **Multi-channel alerting** — mail, Slack, Discord, Teams, and webhooks, de-duplicated and
+  escalating, with recovery notifications.
+- **External heartbeat** — ping healthchecks.io / Cronitor as backups run, catching an outage even
+  if the whole app and scheduler are down.
+
+Running backups across many sites? The
+[**Filament Backup Monitor Collector**](https://github.com/brimham/filament-backup-monitor-collector)
+is a companion Filament plugin that ingests every install's health snapshot into a single
+multi-site dashboard — overdue destinations, last successful backup, and installs that have gone
+quiet, all in one panel.
+
+[**Get Pro →**](https://brimham.app)
 
 ## License
 
