@@ -1,3 +1,5 @@
+* text=auto eol=lf
+
 # Keep `composer require` downloads lean — exclude dev-only paths and the
 # screenshots from the release tarball. They stay in the GitHub repo (so the
 # README still renders) but are not shipped to installs.
@@ -8,3 +10,4 @@
 .gitignore      export-ignore
 phpstan.neon    export-ignore
 phpunit.xml     export-ignore
+renovate.json   export-ignore
