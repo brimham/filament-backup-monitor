@@ -3,5 +3,7 @@
   "extends": [
     "config:recommended",
     "helpers:pinGitHubActionDigests"
-  ]
+  ],
+  "minimumReleaseAge": "3 days",
+  "internalChecksFilter": "strict"
 }
