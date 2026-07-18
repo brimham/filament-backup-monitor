@@ -17,8 +17,6 @@ class BackupRunsPage extends Page implements HasTable
 {
     use InteractsWithTable;
 
-    protected static ?string $navigationLabel = 'Backups';
-
     protected static ?string $slug = 'backup-runs';
 
     // The navigation icon, title and view are supplied through getters rather
@@ -31,9 +29,14 @@ class BackupRunsPage extends Page implements HasTable
         return 'heroicon-o-circle-stack';
     }
 
+    public static function getNavigationLabel(): string
+    {
+        return __('filament-backup-monitor::backups.navigation_label');
+    }
+
     public function getTitle(): string|Htmlable
     {
-        return 'Backup runs';
+        return __('filament-backup-monitor::backups.title');
     }
 
     public function getView(): string
@@ -55,14 +58,16 @@ class BackupRunsPage extends Page implements HasTable
             ->defaultSort('created_at', 'desc')
             ->columns([
                 TextColumn::make('created_at')
-                    ->label('When')
+                    ->label(__('filament-backup-monitor::backups.columns.when'))
                     ->dateTime()
                     ->since()
                     ->sortable(),
                 TextColumn::make('type')
+                    ->label(__('filament-backup-monitor::backups.columns.type'))
                     ->badge()
                     ->sortable(),
                 TextColumn::make('status')
+                    ->label(__('filament-backup-monitor::backups.columns.status'))
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
                         'success', 'healthy' => 'success',
@@ -71,33 +76,37 @@ class BackupRunsPage extends Page implements HasTable
                     })
                     ->sortable(),
                 TextColumn::make('backup_name')
-                    ->label('Backup')
+                    ->label(__('filament-backup-monitor::backups.columns.backup'))
                     ->placeholder('—')
                     ->toggleable(),
                 TextColumn::make('disk')
+                    ->label(__('filament-backup-monitor::backups.columns.disk'))
                     ->placeholder('—')
                     ->sortable(),
                 TextColumn::make('size_in_bytes')
-                    ->label('Size')
+                    ->label(__('filament-backup-monitor::backups.columns.size'))
                     ->formatStateUsing(fn (?int $state): string => $state ? Number::fileSize($state) : '—'),
                 TextColumn::make('message')
+                    ->label(__('filament-backup-monitor::backups.columns.message'))
                     ->limit(60)
                     ->placeholder('—')
                     ->toggleable(),
             ])
             ->filters([
                 SelectFilter::make('type')
+                    ->label(__('filament-backup-monitor::backups.columns.type'))
                     ->options([
-                        'backup' => 'Backup',
-                        'health_check' => 'Health check',
-                        'cleanup' => 'Cleanup',
+                        'backup' => __('filament-backup-monitor::backups.types.backup'),
+                        'health_check' => __('filament-backup-monitor::backups.types.health_check'),
+                        'cleanup' => __('filament-backup-monitor::backups.types.cleanup'),
                     ]),
                 SelectFilter::make('status')
+                    ->label(__('filament-backup-monitor::backups.columns.status'))
                     ->options([
-                        'success' => 'Success',
-                        'failed' => 'Failed',
-                        'healthy' => 'Healthy',
-                        'unhealthy' => 'Unhealthy',
+                        'success' => __('filament-backup-monitor::backups.statuses.success'),
+                        'failed' => __('filament-backup-monitor::backups.statuses.failed'),
+                        'healthy' => __('filament-backup-monitor::backups.statuses.healthy'),
+                        'unhealthy' => __('filament-backup-monitor::backups.statuses.unhealthy'),
                     ]),
             ]);
     }

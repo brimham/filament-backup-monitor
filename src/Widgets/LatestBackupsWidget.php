@@ -18,7 +18,7 @@ class LatestBackupsWidget extends StatsOverviewWidget
 
     protected function getHeading(): ?string
     {
-        return 'Last backup per destination';
+        return __('filament-backup-monitor::backups.widget.heading');
     }
 
     protected function getStats(): array
@@ -27,8 +27,11 @@ class LatestBackupsWidget extends StatsOverviewWidget
 
         if ($runs->isEmpty()) {
             return [
-                Stat::make('No backups yet', 'Nothing recorded')
-                    ->description('Backup runs will appear here once they start')
+                Stat::make(
+                    __('filament-backup-monitor::backups.widget.empty_title'),
+                    __('filament-backup-monitor::backups.widget.empty_value'),
+                )
+                    ->description(__('filament-backup-monitor::backups.widget.empty_description'))
                     ->descriptionIcon('heroicon-m-information-circle')
                     ->color('gray'),
             ];
@@ -55,10 +58,13 @@ class LatestBackupsWidget extends StatsOverviewWidget
         $description = $ok
             ? collect([$run->size_in_bytes ? Number::fileSize($run->size_in_bytes) : null, $when])
                 ->filter()->implode(' · ')
-            : collect(['Failed'.($run->message ? ': '.Str::limit($run->message, 60) : ''), $when])
+            : collect([__('filament-backup-monitor::backups.widget.failed').($run->message ? ': '.Str::limit($run->message, 60) : ''), $when])
                 ->filter()->implode(' · ');
 
-        return Stat::make($run->disk ?? 'default', $run->created_at?->diffForHumans() ?? 'unknown')
+        return Stat::make(
+            $run->disk ?? __('filament-backup-monitor::backups.widget.default_disk'),
+            $run->created_at?->diffForHumans() ?? __('filament-backup-monitor::backups.widget.unknown'),
+        )
             ->description($description)
             ->descriptionIcon($ok ? 'heroicon-m-check-circle' : 'heroicon-m-x-circle')
             ->color($ok ? 'success' : 'danger');
