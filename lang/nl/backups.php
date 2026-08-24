@@ -38,4 +38,7 @@ return [
         'unknown' => 'onbekend',
     ],
 
+    'pro_notice' => 'Deze pagina registreert wat er is uitgevoerd — een back-up die stilletjes nooit is gestart, kan ze niet zien.',
+    'pro_notice_link' => 'Spoor gemiste back-ups op met Pro',
+
 ];

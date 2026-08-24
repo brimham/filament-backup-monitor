@@ -38,4 +38,7 @@ return [
         'unknown' => 'sconosciuto',
     ],
 
+    'pro_notice' => 'Questa pagina registra ciò che è stato eseguito — non può vedere un backup che non è mai partito.',
+    'pro_notice_link' => 'Rileva i backup mancati con Pro',
+
 ];

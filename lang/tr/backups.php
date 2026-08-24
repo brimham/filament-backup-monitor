@@ -38,4 +38,7 @@ return [
         'unknown' => 'bilinmiyor',
     ],
 
+    'pro_notice' => 'Bu sayfa neyin çalıştığını kaydeder — sessizce hiç çalışmamış bir yedeği göremez.',
+    'pro_notice_link' => 'Kaçırılan yedekleri Pro ile yakalayın',
+
 ];

@@ -38,4 +38,7 @@ return [
         'unknown' => 'unbekannt',
     ],
 
+    'pro_notice' => 'Diese Seite zeichnet auf, was gelaufen ist — ein Backup, das stillschweigend nie gestartet wurde, kann sie nicht sehen.',
+    'pro_notice_link' => 'Verpasste Backups mit Pro erkennen',
+
 ];

@@ -38,4 +38,7 @@ return [
         'unknown' => 'desconhecido',
     ],
 
+    'pro_notice' => 'Esta página registra o que foi executado — ela não consegue ver um backup que silenciosamente nunca rodou.',
+    'pro_notice_link' => 'Detecte backups perdidos com o Pro',
+
 ];

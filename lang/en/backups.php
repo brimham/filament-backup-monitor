@@ -38,4 +38,7 @@ return [
         'unknown' => 'unknown',
     ],
 
+    'pro_notice' => 'This page records what ran — it can\'t see a backup that silently never fired.',
+    'pro_notice_link' => 'Catch missed backups with Pro',
+
 ];

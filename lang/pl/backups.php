@@ -38,4 +38,7 @@ return [
         'unknown' => 'nieznany',
     ],
 
+    'pro_notice' => 'Ta strona rejestruje, co zostało wykonane — nie widzi kopii zapasowej, która po cichu nigdy się nie uruchomiła.',
+    'pro_notice_link' => 'Wykrywaj pominięte kopie zapasowe z Pro',
+
 ];
