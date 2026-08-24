@@ -38,4 +38,7 @@ return [
         'unknown' => 'inconnu',
     ],
 
+    'pro_notice' => 'Cette page enregistre ce qui s\'est exécuté — elle ne peut pas voir une sauvegarde qui n\'a jamais été lancée.',
+    'pro_notice_link' => 'Détectez les sauvegardes manquées avec Pro',
+
 ];

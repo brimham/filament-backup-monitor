@@ -38,4 +38,7 @@ return [
         'unknown' => 'desconocido',
     ],
 
+    'pro_notice' => 'Esta página registra lo que se ejecutó — no puede ver una copia de seguridad que nunca llegó a ejecutarse.',
+    'pro_notice_link' => 'Detecta copias de seguridad omitidas con Pro',
+
 ];

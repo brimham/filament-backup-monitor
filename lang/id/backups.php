@@ -38,4 +38,7 @@ return [
         'unknown' => 'tidak diketahui',
     ],
 
+    'pro_notice' => 'Halaman ini mencatat backup yang sudah berjalan — ia tidak dapat melihat backup yang diam-diam tidak pernah berjalan.',
+    'pro_notice_link' => 'Deteksi backup yang terlewat dengan Pro',
+
 ];

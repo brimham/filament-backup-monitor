@@ -61,7 +61,7 @@ A **Backups** item appears in the panel navigation, linking to the run-history p
 This panel shows you the history of backups that *ran*. It can't show you the backup that
 **silently stopped running** — there's no event to record, so a destination that quietly dies just
 stops updating while everything still looks fine. That's the failure that actually loses data.
-[**Brimham Backup Monitor Pro**](https://brimham.app) closes that gap:
+[**Brimham Backup Monitor Pro**](https://brimham.app/plugins/backup-monitor-pro) closes that gap:
 
 - **Missed / overdue detection** — a dead-man's-switch that flags any destination whose last
   successful backup is older than its expected cadence (or has never run).
@@ -76,7 +76,7 @@ is a companion Filament plugin that ingests every install's health snapshot into
 multi-site dashboard — overdue destinations, last successful backup, and installs that have gone
 quiet, all in one panel.
 
-[**Get Pro →**](https://brimham.app)
+[**Get Pro →**](https://brimham.app/plugins/backup-monitor-pro)
 
 ## License
 
