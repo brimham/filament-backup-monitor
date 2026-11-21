@@ -5,5 +5,16 @@
     "helpers:pinGitHubActionDigests"
   ],
   "minimumReleaseAge": "3 days",
-  "internalChecksFilter": "strict"
+  "internalChecksFilter": "strict",
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["composer"],
+      "matchDepTypes": ["require-dev"],
+      "automerge": true
+    }
+  ]
 }
